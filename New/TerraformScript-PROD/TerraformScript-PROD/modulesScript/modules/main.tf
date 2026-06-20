@@ -102,20 +102,20 @@ module "eventbridge" {
 }
 
 
+#######################################
+# Lambda Module (your existing)
 ########################################
-# # Lambda Module (your existing)
-# ########################################
 
-#  module "lambda" {
-#   source = "./lambda"
+ module "lambda" {
+  source = "./lambda"
 
-#   lambda_artifact   = "lambda.zip"
-#   private_subnet_ids = var.private_subnet_ids
-#   lambda_sg_id       = var.lambda_sg_id
+  lambda_artifact   = "lambda.zip"
+  private_subnet_ids = var.private_subnet_ids
+  lambda_sg_id       = var.lambda_sg_id
 
-#   lambdas = var.lambdas
-#   tags    = var.tags
-#}
+  lambdas = var.lambdas
+  tags    = var.tags
+}
 
 
 
