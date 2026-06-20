@@ -2,17 +2,17 @@ provider "aws" {
   region = var.aws_region
 }
 
-module "api_gateway" {
-  source = "./api_gateway"
-  aws_region    = var.aws_region
-  api_name      = var.api_name
-  api_description = var.api_description
-  endpoint_type = var.endpoint_type
-  stage_name    = var.stage_name
-  tags          = var.tags
-  username      = var.username
-  lambda_authorizer_name = var.lambda_authorizer_name
-}
+# module "api_gateway" {
+#   source = "./api_gateway"
+#   aws_region    = var.aws_region
+#   api_name      = var.api_name
+#   api_description = var.api_description
+#   endpoint_type = var.endpoint_type
+#   stage_name    = var.stage_name
+#   tags          = var.tags
+#   username      = var.username
+#   lambda_authorizer_name = var.lambda_authorizer_name
+# }
 
 # module "dynamodb" {
 #   source = "./dynamodb"
